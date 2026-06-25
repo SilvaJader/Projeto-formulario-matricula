@@ -1,0 +1,42 @@
+
+.terms-wrapper {
+  margin-top: 3rem;
+  display: flex;
+  gap: .75rem;
+  align-items: flex-start;
+
+  & strong {
+    font-weight: 500;
+    color: var(--text-highlight);
+  }
+}
+
+.checkbox-wrapper {
+  position: relative;
+
+  & [type="checkbox"] {
+    all:unset;
+    position: absolute;
+    inset: 0;
+  }
+
+  .checkbox-image {
+    flex: 0 0 1.5rem; /*flex grow shrink basis -> define a forma para não mudar indepentende do restante 0-crescimento 0-encolhimento 1.5rem base (neste flax largura da row, */
+    height: 1.5rem; /*acompanhando o flex anterior, este define a altura padrão --> estas configurações são aplicadas para checkbox, avatares, icones e badges*/
+
+    background-image: url(../../assets/icons/checkbox-default.svg);
+  }
+
+  &:hover, &:focus-within {
+    .checkbox-image {
+      background-image: url(../../assets/icons/checkbox-hover.svg);
+    }
+  }
+
+  &:has(:checked) {
+    .checkbox-image {
+      background-image: url(../../assets/icons/checkbox-checked.svg);
+    }
+  }
+
+}
