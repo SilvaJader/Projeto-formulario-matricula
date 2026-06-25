@@ -62,7 +62,7 @@ select {
 }
 
 .input-wrapper:has([disabled]) {
-  opacity: .;
+  opacity: .5;
 }
 
 input {
